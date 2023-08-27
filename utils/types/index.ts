@@ -1,4 +1,4 @@
-import {HttpErrorCodeEnum} from "../enums";
+import {HttpErrorCodeEnum} from "../enums/index.js";
 
 type TGeneralResBody = {
     Error: HttpErrorCodeEnum;
@@ -7,7 +7,7 @@ type TGeneralResBody = {
 
 type TPartnerCreditResBody = TGeneralResBody & {
     Balance: number;
-    ExternalSession: string;
+    ExtSession: string;
     ExtTransactionId: string;
 };
 
@@ -28,4 +28,4 @@ type TPartnerRollbackResBody = TGeneralResBody & {
 
 type TPartnerCloseSessionResBody = TGeneralResBody
 
-export type {TPartnerCreditResBody, TPartnerCloseSessionResBody, TPartnerDebitResBody, TPartnerRollbackResBody, TPartnerGetBalanceResBody}
+export type { TPartnerCreditResBody, TPartnerCloseSessionResBody, TPartnerDebitResBody, TPartnerRollbackResBody, TPartnerGetBalanceResBody}
